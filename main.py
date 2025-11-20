@@ -6,8 +6,8 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 # 正确写法：从 Railway 环境变量读取（安全！）
-TOKEN = 8281468920:AAFWL19Xu7sqksA2amh8E_Q5V9_PzGofvGM("BOT_TOKEN")
-MORALIS_API_KEY = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6IjU5NjM5ZTI1LWY0NTItNGFmZi04OWNlLWI1OWUyYTcyYTA0MCIsIm9yZ0lkIjoiNDgyMjgzIiwidXNlcklkIjoiNDk2MTc3IiwidHlwZUlkIjoiZTk5MDQ0NzItMzVmNS00YmEzLTgxZTMtYTBiZDFkZTJmMmFkIiwidHlwZSI6IlBST0pFQ1QiLCJpYXQiOjE3NjM2Mjc4MzIsImV4cCI6NDkxOTM4NzgzMn0.RthpevketkJhTRQlMSGykTl7QjBARyCDhLTJA05SeQ0("MORALIS_KEY")
+TOKEN = os.getenv("BOT_TOKEN")
+MORALIS_API_KEY = os.getenv("MORALIS_KEY")
 
 # 支持的链
 CHAINS = {
